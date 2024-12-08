@@ -1,0 +1,147 @@
+# 请不要修改此文件，此配置是默认配置
+# 如果需要修改，请修改 xarm_user_params.yaml
+ufactory_driver:  # 主配置块，定义机器人驱动的相关配置
+  ros__parameters:  # ROS 参数命名空间
+    joint_names: ['joint1', 'joint2', 'joint3', 'joint4', 'joint5', 'joint6', 'joint7']  # 机械臂各关节的名称列表
+    xarm_gripper:  # 机械臂夹爪的配置
+      joint_names: ['drive_joint', 'left_finger_joint', 'left_inner_knuckle_joint', 
+                    'right_outer_knuckle_joint', 'right_finger_joint', 'right_inner_knuckle_joint']  
+                    # 夹爪各部分的关节名称列表
+      speed: 2000                                                 # 夹爪的运动速度
+      max_pos: 850                                                # 夹爪的最大位置值
+      frequency: 10                                               # 通信频率
+      threshold: 3                                                # 动作误差的阈值
+      threshold_times: 10                                         # 超过阈值的最大次数
+    services:  # 服务相关配置
+      debug: false                                                # 当 debug 为 true 时，所有服务都将开启
+      clean_error: true                                           # 清除错误状态
+      clean_warn: true                                            # 清除警告状态
+      clean_conf: false                                           # 清除配置
+      save_conf: false                                            # 保存当前配置
+      reload_dynamics: false  # 重新加载动力学数据
+      set_counter_reset: false  # 复位计数器
+      set_counter_increase: false  # 增加计数器
+      clean_gripper_error: false  # 清除夹爪错误状态
+      clean_bio_gripper_error: false  # 清除生物夹爪的错误状态
+      start_record_trajectory: false  # 开始记录轨迹
+      stop_record_trajectory: false  # 停止记录轨迹
+      ft_sensor_set_zero: false  # 力传感器归零
+      set_linear_track_stop: false  # 停止直线轨道
+      clean_linear_track_error: false  # 清除直线轨道的错误状态
+      open_lite6_gripper: false  # 打开 Lite6 夹爪
+      close_lite6_gripper: false  # 关闭 Lite6 夹爪
+      stop_lite6_gripper: false  # 停止 Lite6 夹爪
+      get_state: false  # 获取机械臂状态
+      get_cmdnum: false  # 获取当前指令序号
+      get_vacuum_gripper: false  # 获取真空夹爪状态
+      get_gripper_err_code: false  # 获取夹爪错误代码
+      get_bio_gripper_status: false  # 获取生物夹爪状态
+      get_bio_gripper_error: false  # 获取生物夹爪错误状态
+      get_reduced_mode: false  # 获取简化模式状态
+      get_report_tau_or_i: false  # 获取力或电流报告
+      ft_sensor_app_get: false  # 获取力传感器应用状态
+      get_ft_sensor_error: false  # 获取力传感器错误状态
+      get_trajectory_rw_status: false  # 获取轨迹读写状态
+      get_linear_track_pos: false  # 获取直线轨道位置
+      get_linear_track_status: false  # 获取直线轨道状态
+      get_linear_track_error: false  # 获取直线轨道错误
+      get_linear_track_is_enabled: false  # 获取直线轨道是否启用
+      get_linear_track_on_zero: false  # 获取直线轨道是否在零位
+      get_linear_track_sci: false  # 获取直线轨道 SCI 参数
+      get_err_warn_code: false  # 获取错误或警告代码
+      get_linear_track_sco: false  # 获取直线轨道 SCO 参数
+      set_mode: true  # 设置机器人模式
+      set_state: true  # 设置机器人状态
+      set_collision_sensitivity: false  # 设置碰撞灵敏度
+      set_teach_sensitivity: false  # 设置示教灵敏度
+      set_gripper_mode: false  # 设置夹爪模式
+      set_gripper_enable: false  # 启用夹爪
+      set_tgpio_modbus_timeout: false  # 设置 Modbus 超时时间
+      set_bio_gripper_speed: false  # 设置生物夹爪速度
+      set_collision_rebound: false  # 设置碰撞反弹
+      set_fence_mode: false  # 设置围栏模式
+      set_reduced_mode: false  # 设置简化模式
+      set_self_collision_detection: false  # 设置自碰撞检测
+      set_simulation_robot: false  # 设置仿真模式
+      set_baud_checkset_enable: false  # 启用波特率校验
+      set_report_tau_or_i: false  # 设置报告力或电流
+      ft_sensor_enable: false  # 启用力传感器
+      ft_sensor_app_set: false  # 设置力传感器应用
+      set_linear_track_enable: false  # 启用直线轨道
+      set_linear_track_speed: false  # 设置直线轨道速度
+      set_cartesian_velo_continuous: false  # 设置笛卡尔速度连续性
+      set_allow_approx_motion: false  # 设置允许近似运动
+      set_only_check_type: false  # 仅检查类型
+      config_tgpio_reset_when_stop: false  # 配置停止时重置 TGPIO
+      config_cgpio_reset_when_stop: false  # 配置停止时重置 CGPIO
+      motion_enable: true  # 启用运动
+      set_servo_attach: false  # 附加伺服
+      set_servo_detach: false  # 分离伺服
+      set_reduced_tcp_boundary: false  # 设置简化 TCP 边界
+      get_tgpio_modbus_baudrate: false  # 获取 TGPIO Modbus 波特率
+      set_tgpio_modbus_baudrate: false  # 设置 TGPIO Modbus 波特率
+      get_checkset_default_baud: false  # 获取默认波特率
+      set_checkset_default_baud: false  # 设置默认波特率
+      get_gripper_position: false  # 获取夹爪位置
+      get_position: false  # 获取机器人位置
+      get_servo_angle: true  # 获取伺服角度
+      get_position_aa: false  # 获取 AA 格式位置
+      get_ft_sensor_data: false  # 获取力传感器数据
+      set_pause_time: false  # 设置暂停时间
+      set_tcp_jerk: false  # 设置 TCP 冲击值
+      set_tcp_maxacc: false  # 设置 TCP 最大加速度
+      set_joint_jerk: false  # 设置关节冲击值
+      set_joint_maxacc: false  # 设置关节最大加速度
+      set_gripper_speed: false  # 设置夹爪速度
+      set_reduced_max_tcp_speed: false  # 设置简化模式下的 TCP 最大速度
+      set_reduced_max_joint_speed: false  # 设置简化模式下的关节最大速度
+      set_gravity_direction: false  # 设置重力方向
+      set_tcp_offset: false  # 设置 TCP 偏移
+      set_world_offset: false  # 设置世界坐标偏移
+      set_reduced_joint_range: false  # 设置简化模式下的关节范围
+      set_tcp_load: false  # 设置 TCP 负载
+      set_position: true  # 设置位置
+      set_tool_position: false  # 设置工具位置
+      set_position_aa: false  # 设置 AA 格式位置
+      set_servo_cartesian: false  # 设置笛卡尔伺服
+      set_servo_cartesian_aa: false  # 设置笛卡尔 AA 格式伺服
+      set_servo_angle: true  # 设置伺服角度
+      set_servo_angle_j: true  # 设置伺服角度（关节）
+      move_circle: false  # 执行圆形运动
+      move_gohome: true  # 返回初始位置
+      vc_set_joint_velocity: true  # 设置关节速度控制
+      vc_set_cartesian_velocity: true  # 设置笛卡尔速度控制
+      get_tgpio_digital: false  # 获取 TGPIO 数字量输入
+      get_cgpio_digital: false  # 获取 CGPIO 数字量输入
+      get_tgpio_analog: false  # 获取 TGPIO 模拟量输入
+      get_cgpio_analog: false  # 获取 CGPIO 模拟量输入
+      set_tgpio_digital: false  # 设置 TGPIO 数字量输出
+      set_cgpio_digital: false  # 设置 CGPIO 数字量输出
+      set_tgpio_digital_with_xyz: false  # 设置 TGPIO 数字量输出并指定坐标
+      set_cgpio_digital_with_xyz: false  # 设置 CGPIO 数字量输出并指定坐标
+      set_cgpio_analog: false  # 设置 CGPIO 模拟量输出
+      set_cgpio_analog_with_xyz: false  # 设置 CGPIO 模拟量输出并指定坐标
+      set_vacuum_gripper: false  # 设置真空夹爪
+      set_gripper_position: false  # 设置夹爪位置
+      set_bio_gripper_enable: false  # 启用生物夹爪
+      open_bio_gripper: false  # 打开生物夹爪
+      close_bio_gripper: false  # 关闭生物夹爪
+      robotiq_reset: false  # 重置 Robotiq 夹爪
+      robotiq_set_activate: false  # 激活 Robotiq 夹爪
+      robotiq_set_position: false  # 设置 Robotiq 夹爪位置
+      robotiq_open: false  # 打开 Robotiq 夹爪
+      robotiq_close: false  # 关闭 Robotiq 夹爪
+      robotiq_get_status: false  # 获取 Robotiq 夹爪状态
+      getset_tgpio_modbus_data: false  # 获取或设置 TGPIO Modbus 数据
+      save_record_trajectory: false  # 保存记录的轨迹
+      load_trajectory: false  # 加载轨迹
+      playback_trajectory: false  # 回放轨迹
+      iden_tcp_load: false  # 识别 TCP 负载
+      ft_sensor_iden_load: false  # 力传感器识别负载
+      ft_sensor_cali_load: false  # 力传感器校准负载
+      config_force_control: false  # 配置力控制
+      set_impedance: false  # 设置阻抗控制
+      set_impedance_mbk: false  # 设置阻抗控制的 MBK 参数
+      set_impedance_config: false  # 配置阻抗控制
+      set_linear_track_back_origin: false  # 将直线轨道复位到原点
+      set_linear_track_pos: false  # 设置直线轨道位置

@@ -1,0 +1,37 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/allen/02_Project/ros2_workspace/P03_xarm6_workspace/install/xarm_planner/include/**",
+        "/home/allen/02_Project/ros2_workspace/P03_xarm6_workspace/install/xarm_gazebo/include/**",
+        "/home/allen/02_Project/ros2_workspace/P03_xarm6_workspace/install/xarm_controller/include/**",
+        "/home/allen/02_Project/ros2_workspace/P03_xarm6_workspace/install/xarm_api/include/**",
+        "/home/allen/02_Project/ros2_workspace/P03_xarm6_workspace/install/xarm_msgs/include/**",
+        "/home/allen/02_Project/ros2_workspace/P03_xarm6_workspace/install/realsense_gazebo_plugin/include/**",
+        "/home/allen/02_Project/ros2_workspace/P03_xarm6_workspace/install/realsense2_camera/include/**",
+        "/home/allen/02_Project/ros2_workspace/P03_xarm6_workspace/install/realsense2_camera_msgs/include/**",
+        "/opt/ros/humble/include/**",
+        "/home/allen/02_Project/ros2_workspace/P03_xarm6_workspace/src/realsense2_camera/include/**",
+        "/home/allen/02_Project/ros2_workspace/P03_xarm6_workspace/src/thirdparty/realsense_gazebo_plugin/include/**",
+        "/home/allen/02_Project/ros2_workspace/P03_xarm6_workspace/src/xarm6_workspace/include/**",
+        "/home/allen/02_Project/ros2_workspace/P03_xarm6_workspace/src/xarm_api/include/**",
+        "/home/allen/02_Project/ros2_workspace/P03_xarm6_workspace/src/xarm_controller/include/**",
+        "/home/allen/02_Project/ros2_workspace/P03_xarm6_workspace/src/xarm_gazebo/include/**",
+        "/home/allen/02_Project/ros2_workspace/P03_xarm6_workspace/src/xarm_moveit_servo/include/**",
+        "/home/allen/02_Project/ros2_workspace/P03_xarm6_workspace/src/xarm_planner/include/**",
+        "include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}
